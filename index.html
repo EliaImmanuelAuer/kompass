@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#000000">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kompass">
+<title>Kompass</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="waiting">
+  <div class="compass">
+    <div class="index"></div>
+    <svg id="dial" viewBox="-150 -150 300 300" aria-hidden="true"></svg>
+    <svg class="cross" viewBox="-150 -150 300 300" aria-hidden="true">
+      <line x1="-14" y1="0" x2="14" y2="0"/>
+      <line x1="0" y1="-14" x2="0" y2="14"/>
+    </svg>
+  </div>
+  <div class="readout">
+    <span id="heading">0°</span>
+    <span id="dir">&nbsp;</span>
+  </div>
+  <p id="status">Kalibrierung …</p>
+  <button id="start" hidden>Kompass starten</button>
+</main>
+<script src="geo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
